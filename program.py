@@ -68,3 +68,7 @@ for i in characteristics["gender"]: # go trough gender dict keys
 
     if gender in dna:
         print("Your suspect is {0}.".format(i))  #print key from finded value in dna
+
+        for name in suspects:
+            if suspects[name]["gender"] == "male":
+                print("Suspect based on gender: {0}".format(name))
