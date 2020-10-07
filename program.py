@@ -1,6 +1,5 @@
 with open("dna.txt", "r") as dna_file:
     dna = dna_file.read()
-    print(dna)
 
 # dict inside of dict
 characteristics = {
@@ -62,7 +61,10 @@ suspects = {
 
 }
 
+persons = []
 
+for i in characteristics["gender"]: # go trough gender dict keys
+    gender = characteristics["gender"][i] # get value from very key in gender dict
 
-
-
+    if gender in dna:
+        print("Your suspect is {0}.".format(i))  #print key from finded value in dna
