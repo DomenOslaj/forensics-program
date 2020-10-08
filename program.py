@@ -71,4 +71,14 @@ for i in characteristics["gender"]: # go trough gender dict keys
 
         for name in suspects:
             if suspects[name]["gender"] == "male":
+                persons.append(name)
                 print("Suspect based on gender: {0}".format(name))
+
+# check if only one suspect
+if len(persons) == 1:
+    print("{0} ate the ice cream!".format(persons[0]))
+
+
+
+
+
