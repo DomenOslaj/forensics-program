@@ -78,7 +78,16 @@ for i in characteristics["gender"]: # go trough gender dict keys
 if len(persons) == 1:
     print("{0} ate the ice cream!".format(persons[0]))
 
+for x in characteristics["eye_color"]:
+    eye_color = characteristics["eye_color"][x]
 
+    if eye_color in dna:
+        print("Color of eyes: {0}".format(x))
+        for person in persons:
+            if suspects[person]["eye_color"] != x:
+                persons.remove(person)
 
+if len(persons) == 1:
+    print("{0} ate the ice cream!".format(persons[0]))
 
 
